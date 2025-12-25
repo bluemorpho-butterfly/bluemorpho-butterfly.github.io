@@ -199,6 +199,11 @@ span.spinner > .add:hover {
       
     </script>
     <script>
+jQuery.noConflict();
+     // Use jQuery via jQuery() instead of via $()
+     jQuery(document).ready(function(){
+       jQuery("div").hide();
+     }); 
 (function($) {
 $.fn.spinner = function() {
 this.each(function() {
