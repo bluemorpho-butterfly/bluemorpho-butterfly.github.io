@@ -25,69 +25,33 @@
       }
       .center {
         width: 100%;
-        height: 100%;
+        height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
         perspective: 1000px;
       }
       .number-input {
-        width: 380px;
-        height: 200px;
-        background: rgb(249, 207, 0);
-        border-radius: 10mm;
-        box-sizing: border-box;
-        padding: 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         font-family: poppins;
-        transform-style: preserve-3d;
-        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-        transition: 0.25s;
       }
       .btn {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background: white;
-        color: black;
-        outline: none;
-        border: none;
-        display: flex;
         align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        position: relative;
+    		background-color: initial;
+        border: 0;
+    color: #5c6976;
+    display: flex;
+    font-size: 1rem;
+    height: 2rem;
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
+    width: 2rem
       }
       .btn span {
-        font-size: 55px;
-      }
-      .btn:active::before {
-        position: absolute;
-        content: "";
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background: rgb(255, 255, 255);
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0.8;
-        animation: ripple 0.25s ease-out;
-      }
-      @keyframes ripple {
-        0% {
-          width: 80px;
-          height: 80px;
-          opacity: 0.8;
-        }
-        100% {
-          width: 230px;
-          height: 230px;
-          opacity: 0.3;
-        }
+        font-size: 1rem;
       }
       .value {
         flex-grow: 1;
@@ -102,31 +66,106 @@
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        font-size: 60px;
+        font-size: 1rem;
         font-weight: 600;
       }
-      .text {
-        font-size: 16px;
-        font-weight: 500;
-        letter-spacing: 1px;
+      #card-image-grid {
+        display: flex;
+        flex-direction:row;
       }
+      .card-item {
+        width:200px;
+      }
+      .card-image {
+        width:100%;
+        height:auto;
+      }
+      input[type=number] {
+  float: left;
+  width: 70px;
+  height: 35px;
+  padding: 0;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #93504C;
+  border: 2px #93504C solid;
+  background: none;
+  outline: none;
+  pointer-events: none;
+}
+
+span.spinner {
+  position: absolute;
+  height: 40px;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+span.spinner > .sub,
+span.spinner > .add {
+  float: left;
+  display: block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 1.2em;
+  line-height: 33px;
+  color: #93504C;
+  border: 2px #93504C solid;
+  border-right: 0;
+  border-radius: 2px 0 0 2px;
+  cursor: pointer;
+  transition: 0.1s linear;
+  -o-transition: 0.1s linear;
+  -ms-transition: 0.1s linear;
+  -moz-transition: 0.1s linear;
+  -webkit-transition: 0.1s linear;
+}
+
+span.spinner > .add {
+  top: 0;
+  border: 2px #93504C solid;
+  border-left: 0;
+  border-radius: 0 2px 2px 0;
+}
+
+span.spinner > .sub:hover,
+span.spinner > .add:hover {
+  background: #93504C;
+  color: #25323B;
+}
+ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+ -webkit-appearance: none;
+}
     </style>
   </head>
   <body>
-    <div class="center">
-      <div class="number-input" min="" max="" step="1" value="0">
+    <div id="card-image-grid">
+      <div class="card-item" data-card-id="125001">
+			<img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_001.png" class="card-image">
+   		<div class="center">
+      <div class="number-input" min="0" max="" step="1" value="0">
         <button type="button" class="btn" onclick="decrease()">
           <span class="material-icons-outlined">remove</span>
         </button>
         <div class="value">
-          <span class="number">1</span>
-          <span class="text">Quantity</span>
+          <span class="number">0</span>
         </div>
         <button type="button" class="btn" onclick="increase()">
           <span class="material-icons-outlined">add</span>
         </button>
       </div>
-    </div>
+      </div>
+      <div class="card-item" data-card-id="125002">
+		<img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_002.png" class="card-image">
+        <input type="number" min="1" max="100" value="0">
+        </div>
     <script>
       let input = document.querySelector(".number-input");
       const min = input.getAttribute("min");
@@ -144,13 +183,8 @@
         } else {
           value += step;
         }
-        input.style.transform = "rotateY(20deg)";
-        setTimeout(() => {
-          input.style.transform = "rotateY(0deg)";
-        }, 150);
         number.innerHTML = value;
       }
-
       function decrease() {
         if (min) {
           if (value > min && value - step >= min) {
@@ -159,12 +193,38 @@
         } else {
           value -= step;
         }
-        input.style.transform = "rotateY(-20deg)";
-        setTimeout(() => {
-          input.style.transform = "rotateY(0deg)";
-        }, 150);
         number.innerHTML = value;
       }
+      
     </script>
+    <script>
+(function($) {
+$.fn.spinner = function() {
+this.each(function() {
+var el = $(this);
+
+// add elements
+el.wrap('<span class="spinner"></span>');     
+el.before('<span class="sub">-</span>');
+el.after('<span class="add">+</span>');
+
+// substract
+el.parent().on('click', '.sub', function () {
+if (el.val() > parseInt(el.attr('min')))
+el.val( function(i, oldval) { return --oldval; });
+});
+
+// increment
+el.parent().on('click', '.add', function () {
+if (el.val() < parseInt(el.attr('max')))
+el.val( function(i, oldval) { return ++oldval; });
+});
+    });
+};
+})(jQuery);
+
+$('input[type=number]').spinner();
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   </body>
 </html>
