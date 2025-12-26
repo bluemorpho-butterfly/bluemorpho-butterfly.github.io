@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Number Input</title>
+    <!--Google Fonts and Icons-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Foldit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="layout.css">
+	<button class="button themetogglesimple" onclick="lightmode()" >☾</button>
+</head>
+<body>
+	<h1>Twisted Wonderland Build Divide ~Bright~</h1>
+	<div class="button-group filters-button-group">
+	  <button class="button" id="card-item">All</button>
+	  <button class="button" id="hearts">Heartslabuyl</button>
+	  <button class="button" id="svnc">Savanaclaw</button>
+	  <button class="button" id="octa">Octavinelle</button>
+	  <button class="button" id="scara">Scarabia</button>
+	  <button class="button" id="pome">Pomefiore</button>
+	  <button class="button" id="igni">Ignihyde</button>
+	  <button class="button" id="dia">Diasomnia</button>
+	</div>
+	<div id="card-grid">
+	  <div class="card-item heart riddle" data-card-id="001aVT" >
+	    <div class="card-image">
+	      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/5300ef422e613b74fbf759d293aaab6a/territory_image_path.png?1758276678" class="card-image"/>
+	      <div class="card-number"> 001a </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> VT </div>
+	      <div class="title">Heartslabuyl Dorm </br>Riddle Rosehearts</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	    
+	  </div>
+<script>
+//light mode toggle
+function lightmode() {
+  var element = document.body;
+  element.classList.toggle("light-mode");
+}
+//number spinner
+(function ($) {
+  $.fn.spinner = function () {
+    this.each(function () {
+      var el = $(this);
+
+      // add elements
+      el.wrap('<div class="spinner"></div>');
+      el.before('<span class="sub">-</span>');
+      el.after('<span class="add">+</span>');
+
+      // substract
+      el.parent().on('click', '.sub', function () {
+        if (el.val() > parseInt(el.attr('min')))
+          el.val(function (i, oldval) {
+            return --oldval;
+          });
+      });
+
+      // increment
+      el.parent().on('click', '.add', function () {
+        if (el.val() < parseInt(el.attr('max')))
+          el.val(function (i, oldval) {
+            return ++oldval;
+          });
+      });
+    });
+  };
+})(jQuery);
+$('input[type=number]').spinner();
+
+//filtering
+$("button").click(function() {
+    var show = $(this).attr('id');
+    $('.card-item').each(function(){
+        $(this).show();
+        var test = $(this).attr('class');
+        if (test.indexOf(show) < 0) $(this).hide();
+    });
+});
+</script>
+</body>
+</html>
