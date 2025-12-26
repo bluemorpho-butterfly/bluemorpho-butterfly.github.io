@@ -37,7 +37,7 @@
 		</div>
     </div>
 <script>
- $(document).ready(function(e) {   
+jQuery.noConflict();
 (function ($) {
   $.fn.spinner = function () {
     this.each(function () {
@@ -65,10 +65,9 @@
       });
     });
   };
-});
+})(jQuery);
 
 $('input[type=number]').spinner();
-});
 </script>
 </body>
 </html>
