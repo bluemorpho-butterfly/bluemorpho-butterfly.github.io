@@ -1,6 +1,7 @@
 #card-grid {
   display: flex;
   flex-direction: row;
+  flex-basis: content;
   gap: 1.25rem 0.75rem;
 }
 
