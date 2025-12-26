@@ -17,11 +17,21 @@
       rel="stylesheet"
     />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <link rel="stylesheet" href="layout.css">
 </head>
 <body>
+	<h1>Project Sekai Weiss Schwarz Vol. 3 (JP)</h1>
+	<div class="button-group filters-button-group">
+	  <button class="button is-checked" data-filter="*">show all</button>
+	  <button class="button" data-filter=".ln">Leo/Need</button>
+	  <button class="button" data-filter=".mmj">More More Jump</button>
+	  <button class="button" data-filter=".vbs">Vivid Bad Squad</button>
+	  <button class="button" data-filter=".wxs">Wonderland x Showtime</button>
+	  <button class="button" data-filter=".n25">Nightcord at 25:00</button>
+	</div>
     <div id="card-grid">
-		<div class="card-item" data-card-id="125001">
+		<div class="card-item wxs" data-card-id="125001">
 		  <img
 		    src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_001.png"
 		    class="card-image"
@@ -67,6 +77,10 @@
 })(jQuery);
 
 $('input[type=number]').spinner();
+var $grid = $('.card-grid').isotope({
+  itemSelector: '.wxs',
+  layoutMode: 'fitRows'
+});
 </script>
 </body>
 </html>
