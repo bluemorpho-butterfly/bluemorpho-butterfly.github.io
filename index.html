@@ -47,6 +47,7 @@
 		</div>
     </div>
 <script>
+	//number spinner
 (function ($) {
   $.fn.spinner = function () {
     this.each(function () {
@@ -75,7 +76,9 @@
     });
   };
 })(jQuery);
+$('input[type=number]').spinner();
 
+//filtering
 var $grid = $('.card-grid').isotope({
   itemSelector: '.card-item',
   layoutMode: 'fitRows',
