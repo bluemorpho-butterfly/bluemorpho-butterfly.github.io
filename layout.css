@@ -65,17 +65,22 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1.25rem 0.75rem;
   justify-content: center;
 }
-
-
+/* clear fix */
+.card-grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 .card-item {
   float: left;
   width: 200px;
+  height: fit-content;
+  margin: 1.25rem 0.75rem;
 }
 .card-image {
-  width: 200px;
+  width: 100%;
   height: auto;
   display: block;
   position: relative;
