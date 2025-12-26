@@ -76,11 +76,19 @@
   };
 })(jQuery);
 
-$('input[type=number]').spinner();
 var $grid = $('.card-grid').isotope({
-  itemSelector: '.wxs',
-  layoutMode: 'fitRows'
+  itemSelector: '.card-item',
+  layoutMode: 'fitRows',
+  getSortData: {
+    rarity: '.card-rarity',
+    number: '.card-number parseInt',
+  }
 });
-</script>
-</body>
+
+$('#filters').on( 'click', 'button', function() {
+  var filterValue = $( this ).attr('data-filter');
+  // use filterFn if matches value
+  filterValue = filterFns[ filterValue ] || filterValue;
+  $grid.isotope({ filter: filterValue });
+});
 </html>
