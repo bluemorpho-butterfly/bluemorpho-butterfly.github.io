@@ -18,21 +18,9 @@
     />
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="layout.css">
-	<style>
-      body {
-        width: 100%;
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-      }
-      #card-image-grid {
-        display: flex;
-        flex-direction:row;
-      }
-</style>
-  </head>
-  <body>
-    <div id="card-image-grid">
+</head>
+<body>
+    <div id="card-grid">
 		<div class="card-item" data-card-id="125001">
 		  <img
 		    src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_001.png"
@@ -81,5 +69,5 @@ el.val( function(i, oldval) { return ++oldval; });
 
 $('input[type=number]').spinner();
 </script>
-	</body>
+</body>
 </html>
