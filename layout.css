@@ -61,7 +61,7 @@ h1 {
   background-color: teal;
 }
 /* card display styling */
-.card-grid {
+#card-grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
