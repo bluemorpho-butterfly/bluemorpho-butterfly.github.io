@@ -17,7 +17,6 @@
       rel="stylesheet"
     />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 	<link rel="stylesheet" href="layout.css">
 	<button class="button themetogglesimple" onclick="lightmode()" >☾</button>
 </head>
@@ -25,14 +24,14 @@
 	<h1>Project Sekai Weiss Schwarz Vol. 3 (JP)</h1>
 	<div class="button-group filters-button-group">
 	  <button class="button is-checked" data-filter="*">show all</button>
-	  <button class="button" data-filter=".ln">Leo/Need</button>
-	  <button class="button" data-filter=".mmj">More More Jump</button>
-	  <button class="button" data-filter=".vbs">Vivid Bad Squad</button>
-	  <button class="button" data-filter=".wxs">Wonderland x Showtime</button>
-	  <button class="button" data-filter=".n25">Nightcord at 25:00</button>
-	  <button class="button" data-filter=".vs">Virtual Singer</button>
+	  <button class="button ln">Leo/Need</button>
+	  <button class="button mmj">More More Jump</button>
+	  <button class="button vbs">Vivid Bad Squad</button>
+	  <button class="button wxs">Wonderland x Showtime</button>
+	  <button class="button n25">Nightcord at 25:00</button>
+	  <button class="button vs">Virtual Singer</button>
 	</div>
-	<div class="card-grid" id="card-grid">
+	<div id="card-grid">
 	  <div class="card-item wxs tsukasa" data-card-id="125001" >
 	    <div class="card-image">
 	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_001.png" class="card-image"/>
@@ -238,26 +237,13 @@ function lightmode() {
 $('input[type=number]').spinner();
 
 //filtering
-var $grid = $('.card-grid').isotope({
-  itemSelector: '.card-item',
-  layoutMode: 'fitRows',
-  getSortData: {
-    rarity: '.card-rarity',
-    number: '.card-number parseInt',
-  }
-});
-
-$('#filters').on( 'click', 'button', function() {
-  var filterValue = $( this ).attr('data-filter');
-  $grid.isotope({ filter: filterValue });
-});
-// change is-checked class on buttons
-$('.button-group').each( function( i, buttonGroup ) {
-  var $buttonGroup = $( buttonGroup );
-  $buttonGroup.on( 'click', 'button', function() {
-    $buttonGroup.find('.is-checked').removeClass('is-checked');
-    $( this ).addClass('is-checked');
-  });
+$("button").click(function() {
+    var show = $(this).attr('class');
+    $('.card-item').each(function(){
+        $(this).show();
+        var test = $(this).attr('class');
+        if (test.indexOf(show) < 0) $(this).hide();
+    });
 });
 </script>
 </body>
