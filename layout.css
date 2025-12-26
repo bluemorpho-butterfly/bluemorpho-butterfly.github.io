@@ -3,13 +3,56 @@
   flex-direction: row;
   gap: 1.25rem 0.75rem;
 }
+
+/* clear fix */
+.card-grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 .card-item {
+  position: relative;
+  float: left;
   width: 200px;
 }
 .card-image {
   width: 100%;
   height: auto;
+  display: block;
+  position: relative;
 }
+
+.card-number {
+  position: absolute;
+  bottom: 5;
+  left: 0;
+  align-items: center;
+  background-color: #5c6976;
+  border-top-right-radius: 0.375rem;
+  color: #fffc;
+  column-gap: 0.5em;
+  display: flex;
+  font-weight: 600;
+  max-width: 85%;
+  padding: 0.25rem 0.625rem;
+}
+.card-info {
+  display: block;
+}
+.card-rarity{
+  display:flex;
+  width: 2rem;
+    align-items: center;
+  justify-content: center;
+}
+.title {
+  display: flex;
+  text-align: center;
+  font-size: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  }
 input[type='number'] {
   flex-grow: 1;
   display: flex;
@@ -18,7 +61,6 @@ input[type='number'] {
   font-size: 1rem;
   font-weight: 600;
   color: #5c6976;
-  width: 2 rem;
   border: none;
   text-align: center;
 }
