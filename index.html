@@ -22,14 +22,15 @@
 </head>
 <body>
 	<h1>Project Sekai Weiss Schwarz Vol. 3 (JP)</h1>
-	<div class="button-group filters-button-group button">
-	  <button class="*">All</button>
-	  <button class="ln">Leo/Need</button>
-	  <button class="mmj">More More Jump</button>
-	  <button class="vbs">Vivid Bad Squad</button>
-	  <button class="wxs">Wonderland x Showtime</button>
-	  <button class="n25">Nightcord at 25:00</button>
-	  <button class="vs">Virtual Singer</button>
+	<div class="button-group filters-button-group">
+	  <button class="button" id="card-item">All</button>
+	  <button class="button" id="ln">Leo/Need</button>
+	  <button class="button" id="mmj">More More Jump</button>
+	  <button class="button" id="vbs">Vivid Bad Squad</button>
+	  <button class="button" id="wxs">Wonderland x Showtime</button>
+	  <button class="button" id="n25">Nightcord at 25:00</button>
+	  <button class="button" id="vs">Virtual Singer</button>
+	</div>
 	</div>
 	<div id="card-grid">
 	  <div class="card-item wxs tsukasa" data-card-id="125001" >
@@ -153,17 +154,6 @@
 	      <input type="number" min="0" max="100" value="0" />
 	    </div>
 	  </div>
-			  <div class="card-item wxs vs miku" data-card-id="125004S">
-	    <div class="card-image">
-	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_004s.png" class="card-image"/>
-	      <div class="card-number"> 004 </div>
-	    </div>
-	    <div class="card info">
-	      <div class="card-rarity"> SR </div>
-	      <div class="title">Shiny Smiley Magic</br>Hatsune Miku </div>
-	      <input type="number" min="0" max="100" value="0" />
-	    </div>
-	  </div>
 	  <div class="card-item ln saki" data-card-id="125005">
 	    <div class="card-image">
 	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_005.png" class="card-image"/>
@@ -194,6 +184,94 @@
 	    <div class="card info">
 	      <div class="card-rarity"> SP </div>
 	      <div class="title">Ready to Take it All On</br>Tenma Saki </div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item vs rin" data-card-id="125006">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_006.png" class="card-image"/>
+	      <div class="card-number"> 006 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> R </div>
+	      <div class="title">A Bridge to Mend Your Bond</br>Kagamine Rin</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item vs rin" data-card-id="125006S">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_006s.png" class="card-image"/>
+	      <div class="card-number"> 006 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">A Bridge to Mend Your Bond</br>Kagamine Rin</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item vs rin" data-card-id="125006SP">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_006sp.png" class="card-image"/>
+	      <div class="card-number"> 006 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SP </div>
+	      <div class="title">A Bridge to Mend Your Bond</br>Kagamine Rin</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item vs len" data-card-id="125007">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_007.png" class="card-image"/>
+	      <div class="card-number"> 007 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> R </div>
+	      <div class="title">My Cheer for You</br>Kagamine Len</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item vs len" data-card-id="125007S">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_007s.png" class="card-image"/>
+	      <div class="card-number"> 007 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">My Cheer for You</br>Kagamine Len</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item vs len" data-card-id="125007SP">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_007s.png" class="card-image"/>
+	      <div class="card-number"> 007 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SP </div>
+	      <div class="title">My Cheer for You</br>Kagamine Len</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs tsukasa" data-card-id="125008">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_008.png" class="card-image"/>
+	      <div class="card-number"> 008 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> R </div>
+	      <div class="title">A Rush of Excitement</br>Tenma Tasukasa</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>	  
+	  <div class="card-item wxs tsukasa" data-card-id="125008S">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_008s.png" class="card-image"/>
+	      <div class="card-number"> 008 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">A Rush of Excitement</br>Tenma Tasukasa</div>
 	      <input type="number" min="0" max="100" value="0" />
 	    </div>
 	  </div>
@@ -238,11 +316,11 @@ $('input[type=number]').spinner();
 
 //filtering
 $("button").click(function() {
-    var show = $(this).attr('class');
+    var show = $(this).attr('id');
     $('.card-item').each(function(){
         $(this).show();
         var test = $(this).attr('class');
-        if (test.indexOf(show) < 0) $(this).hide();
+        if (test.indexOf(show) < 0) $(this).hide().slice(1).;
     });
 });
 </script>
