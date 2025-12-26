@@ -17,7 +17,8 @@
       rel="stylesheet"
     />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="layout.css">
+    <script src="/path/to/isotope.pkgd.min.js"></script>
+	<link rel="stylesheet" href="layout.css">
 </head>
 <body>
 	<h1>Project Sekai Weiss Schwarz Vol. 3 (JP)</h1>
@@ -29,22 +30,41 @@
 	  <button class="button" data-filter=".wxs">Wonderland x Showtime</button>
 	  <button class="button" data-filter=".n25">Nightcord at 25:00</button>
 	</div>
-    <div id="card-grid">
-		<div class="card-item wxs" data-card-id="125001">
-		  <img
-		    src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_001.png"
-		    class="card-image"
-		  />
-		  <input type="number" min="0" max="100" value="0" />
-		</div>
-		<div class="card-item" data-card-id="125002">
-		  <img
-		    src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_002.png"
-		    class="card-image"
-		  />
-		  <input type="number" min="0" max="100" value="0" />
-		</div>
-    </div>
+	<div id="card-grid">
+	  <div class="card-item wxs tsukasa" data-card-id="125001" >
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_001.png" class="card-image"/>
+	      <div class="card-number"> 001 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">In Tearful Eyes, An Immortal Bird </br>Tenma Tsukasa</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs emu" data-card-id="125002">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_002.png" class="card-image"/>
+	      <div class="card-number"> 002 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">The Sparkle in Your Eyes</br>Emu Otori</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	    <div class="card-item wxs rui" data-card-id="125003">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_003.png" class="card-image"/>
+	      <div class="card-number"> 003 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">Blowing in the Evening Breeze</br>Kamishiro Rui</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	</div>
 <script>
 	//number spinner
 (function ($) {
@@ -93,4 +113,6 @@ $('#filters').on( 'click', 'button', function() {
   filterValue = filterFns[ filterValue ] || filterValue;
   $grid.isotope({ filter: filterValue });
 });
+</script>
+</body>
 </html>
