@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Number Input</title>
+    <!--Google Fonts and Icons-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Foldit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="layout.css">
+	<button class="button themetogglesimple" onclick="lightmode()" >☾</button>
+</head>
+<body>
+	<h1>Project Sekai Weiss Schwarz Vol. 3 (JP)</h1>
+	<div class="button-group filters-button-group">
+	  <button class="button" id="card-item">All</button>
+	  <button class="button" id="ln">Leo/Need</button>
+	  <button class="button" id="mmj">More More Jump</button>
+	  <button class="button" id="vbs">Vivid Bad Squad</button>
+	  <button class="button" id="wxs">Wonderland x Showtime</button>
+	  <button class="button" id="n25">Nightcord at 25:00</button>
+	  <button class="button" id="vs">Virtual Singer</button>
+	</div>
+	</div>
+	<div id="card-grid">
+	  <div class="card-item wxs tsukasa" data-card-id="125001" >
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_001.png" class="card-image"/>
+	      <div class="card-number"> 001 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> RR </div>
+	      <div class="title">In Tearful Eyes, An Immortal Bird </br>Tenma Tsukasa</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs tsukasa" data-card-id="125001S" >
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_001s.png" class="card-image"/>
+	      <div class="card-number"> 001S </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">In Tearful Eyes, An Immortal Bird </br>Tenma Tsukasa</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs tsukasa" data-card-id="125001SP" >
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_001sp.png" class="card-image"/>
+	      <div class="card-number"> 001SP </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SP </div>
+	      <div class="title">In Tearful Eyes, An Immortal Bird </br>Tenma Tsukasa</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs emu" data-card-id="125002">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_002.png" class="card-image"/>
+	      <div class="card-number"> 002 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> RR </div>
+	      <div class="title">The Sparkle in Your Eyes</br>Emu Otori</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs emu" data-card-id="125002S">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_002s.png" class="card-image"/>
+	      <div class="card-number"> 002S </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">The Sparkle in Your Eyes</br>Emu Otori</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs emu" data-card-id="125002SP">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_002sp.png" class="card-image"/>
+	      <div class="card-number"> 002SP </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SP </div>
+	      <div class="title">The Sparkle in Your Eyes</br>Emu Otori</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs rui" data-card-id="125003">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_003.png" class="card-image"/>
+	      <div class="card-number"> 003 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> R </div>
+	      <div class="title">Blowing in the Evening Breeze</br>Kamishiro Rui</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs rui" data-card-id="125003S">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_003s.png" class="card-image"/>
+	      <div class="card-number"> 003S </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">Blowing in the Evening Breeze</br>Kamishiro Rui</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs rui" data-card-id="125003SP">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_003sp.png" class="card-image"/>
+	      <div class="card-number"> 003SP </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SP </div>
+	      <div class="title">Blowing in the Evening Breeze</br>Kamishiro Rui</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs vs miku" data-card-id="125004">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_004.png" class="card-image"/>
+	      <div class="card-number"> 004 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> R </div>
+	      <div class="title">Shiny Smiley Magic</br>Hatsune Miku </div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs vs miku" data-card-id="125004S">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_004s.png" class="card-image"/>
+	      <div class="card-number"> 004 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">Shiny Smiley Magic</br>Hatsune Miku </div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item ln saki" data-card-id="125005">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_005.png" class="card-image"/>
+	      <div class="card-number"> 004 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> R </div>
+	      <div class="title">Ready to Take it All On</br>Tenma Saki </div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item ln saki" data-card-id="125005S">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_005s.png" class="card-image"/>
+	      <div class="card-number"> 004 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">Ready to Take it All On</br>Tenma Saki </div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item ln  saki" data-card-id="125005SP">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_005sp.png" class="card-image"/>
+	      <div class="card-number"> 004 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SP </div>
+	      <div class="title">Ready to Take it All On</br>Tenma Saki </div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item vs rin" data-card-id="125006">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_006.png" class="card-image"/>
+	      <div class="card-number"> 006 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> R </div>
+	      <div class="title">A Bridge to Mend Your Bond</br>Kagamine Rin</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item vs rin" data-card-id="125006S">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_006s.png" class="card-image"/>
+	      <div class="card-number"> 006 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">A Bridge to Mend Your Bond</br>Kagamine Rin</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item vs rin" data-card-id="125006SP">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_006sp.png" class="card-image"/>
+	      <div class="card-number"> 006 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SP </div>
+	      <div class="title">A Bridge to Mend Your Bond</br>Kagamine Rin</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item vs len" data-card-id="125007">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_007.png" class="card-image"/>
+	      <div class="card-number"> 007 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> R </div>
+	      <div class="title">My Cheer for You</br>Kagamine Len</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item vs len" data-card-id="125007S">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_007s.png" class="card-image"/>
+	      <div class="card-number"> 007 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">My Cheer for You</br>Kagamine Len</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item vs len" data-card-id="125007SP">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_007sp.png" class="card-image"/>
+	      <div class="card-number"> 007 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SP </div>
+	      <div class="title">My Cheer for You</br>Kagamine Len</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs tsukasa" data-card-id="125008">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_008.png" class="card-image"/>
+	      <div class="card-number"> 008 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> R </div>
+	      <div class="title">A Rush of Excitement</br>Tenma Tasukasa</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>	  
+	  <div class="card-item wxs tsukasa" data-card-id="125008S">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_008s.png" class="card-image"/>
+	      <div class="card-number"> 008 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">A Rush of Excitement</br>Tenma Tasukasa</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+		
+	</div>
+<script>
+//light mode toggle
+function lightmode() {
+  var element = document.body;
+  element.classList.toggle("light-mode");
+}
+//number spinner
+(function ($) {
+  $.fn.spinner = function () {
+    this.each(function () {
+      var el = $(this);
+
+      // add elements
+      el.wrap('<div class="spinner"></div>');
+      el.before('<span class="sub">-</span>');
+      el.after('<span class="add">+</span>');
+
+      // substract
+      el.parent().on('click', '.sub', function () {
+        if (el.val() > parseInt(el.attr('min')))
+          el.val(function (i, oldval) {
+            return --oldval;
+          });
+      });
+
+      // increment
+      el.parent().on('click', '.add', function () {
+        if (el.val() < parseInt(el.attr('max')))
+          el.val(function (i, oldval) {
+            return ++oldval;
+          });
+      });
+    });
+  };
+})(jQuery);
+$('input[type=number]').spinner();
+
+//filtering
+$("button").click(function() {
+    var show = $(this).attr('id');
+    $('.card-item').each(function(){
+        $(this).show();
+        var test = $(this).attr('class');
+        if (test.indexOf(show) < 0) $(this).hide();
+    });
+});
+</script>
+</body>
+</html>
