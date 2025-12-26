@@ -12,7 +12,6 @@
 }
 
 .card-item {
-  position: relative;
   float: left;
   width: 200px;
 }
@@ -21,15 +20,17 @@
   height: auto;
   display: block;
   position: relative;
+
 }
 
 .card-number {
   position: absolute;
-  bottom: 5;
+  bottom: 0;
   left: 0;
   align-items: center;
   background-color: #5c6976;
   border-top-right-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
   color: #fffc;
   column-gap: 0.5em;
   display: flex;
