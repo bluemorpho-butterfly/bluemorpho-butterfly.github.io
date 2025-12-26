@@ -30,8 +30,9 @@
 	  <button class="button" data-filter=".vbs">Vivid Bad Squad</button>
 	  <button class="button" data-filter=".wxs">Wonderland x Showtime</button>
 	  <button class="button" data-filter=".n25">Nightcord at 25:00</button>
+	  <button class="button" data-filter=".vs">Virtual Singer</button>
 	</div>
-	<div id="card-grid">
+	<div class="card-grid" id="card-grid">
 	  <div class="card-item wxs tsukasa" data-card-id="125001" >
 	    <div class="card-image">
 	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_001.png" class="card-image"/>
@@ -131,7 +132,7 @@
 	      <input type="number" min="0" max="100" value="0" />
 	    </div>
 	  </div>
-	  <div class="card-item wxs miku" data-card-id="125004">
+	  <div class="card-item wxs vs miku" data-card-id="125004">
 	    <div class="card-image">
 	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_004.png" class="card-image"/>
 	      <div class="card-number"> 004 </div>
@@ -142,7 +143,7 @@
 	      <input type="number" min="0" max="100" value="0" />
 	    </div>
 	  </div>
-	  <div class="card-item wxs miku" data-card-id="125004S">
+	  <div class="card-item wxs vs miku" data-card-id="125004S">
 	    <div class="card-image">
 	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_004s.png" class="card-image"/>
 	      <div class="card-number"> 004 </div>
@@ -153,6 +154,51 @@
 	      <input type="number" min="0" max="100" value="0" />
 	    </div>
 	  </div>
+			  <div class="card-item wxs vs miku" data-card-id="125004S">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_004s.png" class="card-image"/>
+	      <div class="card-number"> 004 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">Shiny Smiley Magic</br>Hatsune Miku </div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item ln saki" data-card-id="125005">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_005.png" class="card-image"/>
+	      <div class="card-number"> 004 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> R </div>
+	      <div class="title">Ready to Take it All On</br>Tenma Saki </div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item ln saki" data-card-id="125005S">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_005s.png" class="card-image"/>
+	      <div class="card-number"> 004 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">Ready to Take it All On</br>Tenma Saki </div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item ln  saki" data-card-id="125005SP">
+	    <div class="card-image">
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_005sp.png" class="card-image"/>
+	      <div class="card-number"> 004 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SP </div>
+	      <div class="title">Ready to Take it All On</br>Tenma Saki </div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+		
 	</div>
 <script>
 //light mode toggle
@@ -203,9 +249,15 @@ var $grid = $('.card-grid').isotope({
 
 $('#filters').on( 'click', 'button', function() {
   var filterValue = $( this ).attr('data-filter');
-  // use filterFn if matches value
-  filterValue = filterFns[ filterValue ] || filterValue;
   $grid.isotope({ filter: filterValue });
+});
+// change is-checked class on buttons
+$('.button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
 });
 </script>
 </body>
