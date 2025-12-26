@@ -17,8 +17,9 @@
       rel="stylesheet"
     />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="/path/to/isotope.pkgd.min.js"></script>
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 	<link rel="stylesheet" href="layout.css">
+	<button class="button themetogglesimple" onclick="lightmode()" >☾</button>
 </head>
 <body>
 	<h1>Project Sekai Weiss Schwarz Vol. 3 (JP)</h1>
@@ -154,7 +155,12 @@
 	  </div>
 	</div>
 <script>
-	//number spinner
+//light mode toggle
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("light-mode");
+}
+//number spinner
 (function ($) {
   $.fn.spinner = function () {
     this.each(function () {
