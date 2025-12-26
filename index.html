@@ -48,38 +48,7 @@
 		  <input type="number" min="0" max="100" value="0" />
 		</div>
     </div>
-    <script>
-      let input = document.querySelector(".number-input");
-      const min = input.getAttribute("min");
-      const max = input.getAttribute("max");
-      const step = Number(input.getAttribute("step") || 1);
-      var value = Number(input.getAttribute("value") || 0);
-      let number = document.querySelector(".number");
-      number.innerHTML = value;
-
-      function increase() {
-        if (max) {
-          if (value < max && value + step <= max) {
-            value += step;
-          }
-        } else {
-          value += step;
-        }
-        number.innerHTML = value;
-      }
-      function decrease() {
-        if (min) {
-          if (value > min && value - step >= min) {
-            value -= step;
-          }
-        } else {
-          value -= step;
-        }
-        number.innerHTML = value;
-      }
-      
-    </script>
-    <script>
+<script>
 jQuery.noConflict();
      // Use jQuery via jQuery() instead of via $()
      jQuery(document).ready(function(){
@@ -112,5 +81,5 @@ el.val( function(i, oldval) { return ++oldval; });
 
 $('input[type=number]').spinner();
 </script>
-  </body>
+	</body>
 </html>
