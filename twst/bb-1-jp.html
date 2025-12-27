@@ -38,15 +38,19 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="wsb-1-jp">Weiss Schwarz Blau (JP)</a>
-      <a href="wsb-exp-jp">Weiss Schwarz Blau Expansion Pack (JP)</a>
-      <a href="bb-1-jp">Build Divide ~Bright~ (JP)</a>
+      <a href="../twst/wsb-1-jp">Weiss Schwarz Blau (JP)</a>
+      <a href="../twst/wsb-exp-jp">Weiss Schwarz Blau Expansion Pack (JP)</a>
+      <a href="../twst/bb-1-jp">Build Divide ~Bright~ (JP)</a>
     </div>
   </div> 
 </div>
 </head>
 <body>
 	<h1>Twisted Wonderland Build Divide ~Bright~</h1>
+	<div style="align-content:center;">
+		<button class="button" id="save">save</button>	
+		<button class="button" id="load">load</button>
+	</div>
 	<div class="button-group filters-button-group">
 	  <button class="button" id="card-item">All</button>
 	  <button class="button" id="hearts">Heartslabuyl</button>
@@ -58,62 +62,140 @@
 	  <button class="button" id="dia">Diasomnia</button>
 	</div>
 	<div id="card-grid">
-	<div class="card-item hearts riddle" data-card-id="001aVT" >
-	    <div class="card-image">
-	      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/5300ef422e613b74fbf759d293aaab6a/territory_image_path.png" class="card-image"/>
-	      <div class="card-number"> 001a </div>
-	    </div>
-	    <div class="card info">
-	      <div class="card-rarity"> VT </div>
-	      <div class="title">Heartslabuyl Dorm </br>Riddle Rosehearts</div>
-	      <input type="number" min="0" max="100" value="0" />
-	    </div>
-	</div>
-	<div class="card-item hearts ace" data-card-id="001bVT" >
-	    <div class="card-image">
-	      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/7cfd5df443b4eb0d69886a583b33de4c/territory_image_path.png" class="card-image"/>
-	      <div class="card-number"> 001b </div>
-	    </div>
-	    <div class="card info">
-	      <div class="card-rarity"> VT </div>
-	      <div class="title">Heartslabuyl Dorm </br>Ace Trappola</div>
-	      <input type="number" min="0" max="100" value="0" />
-	    </div>	    
-	</div>    
-	<div class="card-item hearts deuce" data-card-id="001cVT" >
-	    <div class="card-image">
-	      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/0a54b19a13b6712dc04d1b49215423d8/territory_image_path.png" class="card-image"/>
-	      <div class="card-number"> 001c </div>
-	    </div>
-	    <div class="card info">
-	      <div class="card-rarity"> VT </div>
-	      <div class="title">Heartslabuyl Dorm </br>Deuce Spade</div>
-	      <input type="number" min="0" max="100" value="0" />
-	    </div>	    
-	</div>
-	<div class="card-item hearts cater" data-card-id="001dVT" >
-	    <div class="card-image">
-	      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/0a54b19a13b6712dc04d1b49215423d8/territory_image_path.png" class="card-image"/>
-	      <div class="card-number"> 001d </div>
-	    </div>
-	    <div class="card info">
-	      <div class="card-rarity"> VT </div>
-	      <div class="title">Heartslabuyl Dorm </br>Cater Diamond</div>
-	      <input type="number" min="0" max="100" value="0" />
-	    </div>	    
-	</div>
-	<div class="card-item hearts trey" data-card-id="001eVT" >
-	    <div class="card-image">
-	      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/fc95fa5740ba01a870cfa52f671fe1e4/territory_image_path.png" class="card-image"/>
-	      <div class="card-number"> 001e </div>
-	    </div>
-	    <div class="card info">
-	      <div class="card-rarity"> VT </div>
-	      <div class="title">Heartslabuyl Dorm </br>Trey Clover</div>
-	      <input type="number" min="0" max="100" value="0" />
-	    </div>	    
-	</div>
-	
+		<div class="card-item hearts riddle" data-card-id="001aN" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/d94fd74dcde1aa553be72c1006578b23/territory_image_path.png" class="card-image"/>
+		      <div class="card-number"> 001aN </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> N </div>
+		      <div class="title">Heartslabuyl Dorm </br>Riddle Rosehearts</div>
+		      <input type="number" min="0" max="100" value="0" />
+		    </div>
+		</div>
+		<div class="card-item hearts riddle" data-card-id="001aBT" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/e49eb6523da9e1c347bc148ea8ac55d3/territory_image_path.png" class="card-image"/>
+		      <div class="card-number"> 001aBT </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> BT </div>
+		      <div class="title">Heartslabuyl Dorm </br>Riddle Rosehearts</div>
+		      <input type="number" min="0" max="100" value="0" />
+		    </div>
+		</div>
+		<div class="card-item hearts riddle" data-card-id="001aVT" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/5300ef422e613b74fbf759d293aaab6a/territory_image_path.png" class="card-image"/>
+		      <div class="card-number"> 001aVT </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> VT </div>
+		      <div class="title">Heartslabuyl Dorm </br>Riddle Rosehearts</div>
+		      <input type="number" min="0" max="100" value="0" />
+		    </div>
+		</div>
+		<div class="card-item hearts ace" data-card-id="001bVT" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/7cfd5df443b4eb0d69886a583b33de4c/territory_image_path.png" class="card-image"/>
+		      <div class="card-number"> 001bVT </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> VT </div>
+		      <div class="title">Heartslabuyl Dorm </br>Ace Trappola</div>
+		      <input type="number" min="0" max="100" value="0" />
+		    </div>	    
+		</div>    
+		<div class="card-item hearts deuce" data-card-id="001cVT" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/0a54b19a13b6712dc04d1b49215423d8/territory_image_path.png" class="card-image"/>
+		      <div class="card-number"> 001cVT </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> VT </div>
+		      <div class="title">Heartslabuyl Dorm </br>Deuce Spade</div>
+		      <input type="number" min="0" max="100" value="0" />
+		    </div>	    
+		</div>
+		<div class="card-item hearts cater" data-card-id="001dVT" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/a3bf6e4db673b6449c2f7d13ee6ec9c0/territory_image_path.png" class="card-image"/>
+		      <div class="card-number"> 001dVT </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> VT </div>
+		      <div class="title">Heartslabuyl Dorm </br>Cater Diamond</div>
+		      <input type="number" min="0" max="100" value="0" />
+		    </div>	    
+		</div>
+		<div class="card-item hearts trey" data-card-id="001eVT" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/fc95fa5740ba01a870cfa52f671fe1e4/territory_image_path.png" class="card-image"/>
+		      <div class="card-number"> 001eVT </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> VT </div>
+		      <div class="title">Heartslabuyl Dorm </br>Trey Clover</div>
+		      <input type="number" min="0" max="100" value="0" />
+		    </div>	    
+		</div>
+		<div class="card-item hearts riddle" data-card-id="008N" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/b8b12f949378552c21f28deff8ba8eb6/image_path.png" class="card-image"/>
+		      <div class="card-number"> 008N </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> N </div>
+		      <div class="title">Heartslabuyl Dorm Leader </br>Riddle Rosehearts</div>
+		      <input type="number" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+		<div class="card-item hearts riddle" data-card-id="009R" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/4feb2371a1843d099b28dd419dbab1ef/image_path.png" class="card-image"/>
+		      <div class="card-number"> 009R </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> R </div>
+		      <div class="title">Rose Honor Student </br>Riddle Rosehearts</div>
+		      <input type="number" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+		<div class="card-item hearts riddle" data-card-id="009SSR" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/bbc12a3a98d8487f58a87d3a3070516e/image_path.png" class="card-image"/>
+		      <div class="card-number"> 009SSR </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> SSR </div>
+		      <div class="title">Rose Honor Student </br>Riddle Rosehearts</div>
+		      <input type="number" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+		<div class="card-item hearts riddle" data-card-id="010BR" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/4b7a55505729b7f664e7222960e9c2d5/image_path.png" class="card-image"/>
+		      <div class="card-number"> 010BR </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> BR </div>
+		      <div class="title">Red Ruler </br>Riddle Rosehearts</div>
+		      <input type="number" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+		<div class="card-item hearts riddle" data-card-id="010SR" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/bbc12a3a98d8487f58a87d3a3070516e/image_path.png" class="card-image"/>
+		      <div class="card-number"> 010SR </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> SR </div>
+		      <div class="title">Red Ruler </br>Riddle Rosehearts</div>
+		      <input type="number" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+
+
 	</div>
 <script>
 //light mode toggle
@@ -160,6 +242,27 @@ $("button").click(function() {
         var test = $(this).attr('class');
         if (test.indexOf(show) < 0) $(this).hide();
     });
+});
+
+//local storage
+$('#save').on('click', function(){
+
+    $('input[type="number"]').each(function(){    
+        var id = $(this).attr('id');
+        var value = $(this).val();
+       localStorage.setItem(id, value);
+        
+    });   
+});
+
+$('#load').on('click', function(){
+    $('input[type="number"]').each(function(){    
+        var id = $(this).attr('id');
+        var value = localStorage.getItem(id);
+        
+        $(this).val(value);
+        
+    }); 
 });
 </script>
 </body>
