@@ -47,10 +47,10 @@
 </head>
 <body>
 	<h1>Twisted Wonderland Build Divide ~Bright~</h1>
-	<div style="align-content:center;">
-		<button class="button" id="save">save</button>	
-		<button class="button" id="load">load</button>
-	</div>
+	<div style="align-content:center;" class="button button-group">
+		<button id="save">save</button>	
+		<button id="load">load</button>
+	</div>k
 	<div class="button-group filters-button-group">
 	  <button class="button" id="card-item">All</button>
 	  <button class="button" id="hearts">Heartslabuyl</button>
@@ -61,11 +61,31 @@
 	  <button class="button" id="igni">Ignihyde</button>
 	  <button class="button" id="dia">Diasomnia</button>
 	</div>
+	<div class="button-group filters-button-group">
+	  <button class="button" id="card-item">All</button>
+	  <button class="button" id="n">N</button>
+	  <button class="button" id="r">R</button>
+	  <button class="button" id="sr">SR</button>
+	  <button class="button" id="ssr">SSR</button>
+	  <button class="button" id="br">BR</button>
+	  <button class="button" id="bt">BT</button>
+	  <button class="button" id="pr">PR</button>
+	  <button class="button" id="vt">VT</button>
+	</div>
 	<div id="card-grid">
-		<div class="card-item hearts riddle" data-card-id="001aN" >
+		<div class="card-item hearts riddle n" data-card-id="001aN" >
 		    <div class="card-image">
-		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/d94fd74dcde1aa553be72c1006578b23/territory_image_path.png" class="card-image"/>
-		      <div class="card-number"> 001aN </div>
+		      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/d94fd74dcde1aa553be72c1006578b23/territory_image_path.png" class="card-image"/>
+					</div>
+					<div class="back">
+<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/d94fd74dcde1aa553be72c1006578b23/image_path.png" class="card-image"/>
+					</div>
+				</div>
+				</div>
+		    	<div class="card-number"> 001aN </div>
 		    </div>
 		    <div class="card info">
 		      <div class="card-rarity"> N </div>
@@ -73,9 +93,18 @@
 		      <input type="number" min="0" max="100" value="0" />
 		    </div>
 		</div>
-		<div class="card-item hearts riddle" data-card-id="001aBT" >
+		<div class="card-item hearts riddle bt" data-card-id="001aBT" >
 		    <div class="card-image">
-		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/e49eb6523da9e1c347bc148ea8ac55d3/territory_image_path.png" class="card-image"/>
+		      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/e49eb6523da9e1c347bc148ea8ac55d3/territory_image_path.png" class="card-image"/>
+					</div>
+					<div class="back">
+<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/e49eb6523da9e1c347bc148ea8ac55d3/image_path.png" class="card-image"/>
+					</div>
+				</div>
+			</div>
 		      <div class="card-number"> 001aBT </div>
 		    </div>
 		    <div class="card info">
@@ -84,9 +113,18 @@
 		      <input type="number" min="0" max="100" value="0" />
 		    </div>
 		</div>
-		<div class="card-item hearts riddle" data-card-id="001aVT" >
+		<div class="card-item hearts riddle pr vt" data-card-id="001aVT" >
 		    <div class="card-image">
-		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/5300ef422e613b74fbf759d293aaab6a/territory_image_path.png" class="card-image"/>
+		      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/5300ef422e613b74fbf759d293aaab6a/territory_image_path.png" class="card-image"/>
+					</div>
+					<div class="back">
+<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/5300ef422e613b74fbf759d293aaab6a/image_path.png" class="card-image"/>
+					</div>
+				</div>
+			</div>
 		      <div class="card-number"> 001aVT </div>
 		    </div>
 		    <div class="card info">
@@ -95,9 +133,18 @@
 		      <input type="number" min="0" max="100" value="0" />
 		    </div>
 		</div>
-		<div class="card-item hearts ace" data-card-id="001bVT" >
+		<div class="card-item hearts ace pr vt" data-card-id="001bVT" >
 		    <div class="card-image">
-		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/7cfd5df443b4eb0d69886a583b33de4c/territory_image_path.png" class="card-image"/>
+		      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/7cfd5df443b4eb0d69886a583b33de4c/territory_image_path.png" class="card-image"/>
+					</div>
+					<div class="back">
+<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/7cfd5df443b4eb0d69886a583b33de4c/image_path.png" class="card-image"/>
+					</div>
+				</div>
+			</div>
 		      <div class="card-number"> 001bVT </div>
 		    </div>
 		    <div class="card info">
@@ -106,9 +153,18 @@
 		      <input type="number" min="0" max="100" value="0" />
 		    </div>	    
 		</div>    
-		<div class="card-item hearts deuce" data-card-id="001cVT" >
+		<div class="card-item hearts deuce pr vt" data-card-id="001cVT" >
 		    <div class="card-image">
-		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/0a54b19a13b6712dc04d1b49215423d8/territory_image_path.png" class="card-image"/>
+		      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/0a54b19a13b6712dc04d1b49215423d8/territory_image_path.png" class="card-image"/>
+					</div>
+					<div class="back">
+<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/0a54b19a13b6712dc04d1b49215423d8/image_path.png" class="card-image"/>
+					</div>
+				</div>
+			</div>
 		      <div class="card-number"> 001cVT </div>
 		    </div>
 		    <div class="card info">
@@ -117,9 +173,18 @@
 		      <input type="number" min="0" max="100" value="0" />
 		    </div>	    
 		</div>
-		<div class="card-item hearts cater" data-card-id="001dVT" >
+		<div class="card-item hearts cater pr vt" data-card-id="001dVT" >
 		    <div class="card-image">
-		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/a3bf6e4db673b6449c2f7d13ee6ec9c0/territory_image_path.png" class="card-image"/>
+		      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/a3bf6e4db673b6449c2f7d13ee6ec9c0/territory_image_path.png" class="card-image"/>
+					</div>
+					<div class="back">
+<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/a3bf6e4db673b6449c2f7d13ee6ec9c0/image_path.png" class="card-image"/>
+					</div>
+				</div>
+			</div>
 		      <div class="card-number"> 001dVT </div>
 		    </div>
 		    <div class="card info">
@@ -128,9 +193,18 @@
 		      <input type="number" min="0" max="100" value="0" />
 		    </div>	    
 		</div>
-		<div class="card-item hearts trey" data-card-id="001eVT" >
+		<div class="card-item hearts trey pr vt" data-card-id="001eVT" >
 		    <div class="card-image">
-		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/fc95fa5740ba01a870cfa52f671fe1e4/territory_image_path.png" class="card-image"/>
+		      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/fc95fa5740ba01a870cfa52f671fe1e4/territory_image_path.png" class="card-image"/>
+					</div>
+					<div class="back">
+<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/fc95fa5740ba01a870cfa52f671fe1e4/image_path.png" class="card-image"/>
+					</div>
+				</div>
+			</div>
 		      <div class="card-number"> 001eVT </div>
 		    </div>
 		    <div class="card info">
@@ -139,7 +213,7 @@
 		      <input type="number" min="0" max="100" value="0" />
 		    </div>	    
 		</div>
-		<div class="card-item hearts riddle" data-card-id="008N" >
+		<div class="card-item hearts riddle n" data-card-id="008N" >
 		    <div class="card-image">
 		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/b8b12f949378552c21f28deff8ba8eb6/image_path.png" class="card-image"/>
 		      <div class="card-number"> 008N </div>
@@ -150,7 +224,7 @@
 		      <input type="number" min="0" max="100" value="0" />
 		    </div>
 		</div>	
-		<div class="card-item hearts riddle" data-card-id="009R" >
+		<div class="card-item hearts riddle r" data-card-id="009R" >
 		    <div class="card-image">
 		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/4feb2371a1843d099b28dd419dbab1ef/image_path.png" class="card-image"/>
 		      <div class="card-number"> 009R </div>
@@ -161,7 +235,7 @@
 		      <input type="number" min="0" max="100" value="0" />
 		    </div>
 		</div>	
-		<div class="card-item hearts riddle" data-card-id="009SSR" >
+		<div class="card-item hearts riddle ssr" data-card-id="009SSR" >
 		    <div class="card-image">
 		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/bbc12a3a98d8487f58a87d3a3070516e/image_path.png" class="card-image"/>
 		      <div class="card-number"> 009SSR </div>
@@ -172,7 +246,18 @@
 		      <input type="number" min="0" max="100" value="0" />
 		    </div>
 		</div>	
-		<div class="card-item hearts riddle" data-card-id="010BR" >
+		<div class="card-item hearts riddle sr" data-card-id="010SR" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/d156d4836ea87dd732cfda175b7911cb/image_path.png" class="card-image"/>
+		      <div class="card-number"> 010SR </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> SR </div>
+		      <div class="title">Red Ruler </br>Riddle Rosehearts</div>
+		      <input type="number" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+		<div class="card-item hearts riddle br" data-card-id="010BR" >
 		    <div class="card-image">
 		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/4b7a55505729b7f664e7222960e9c2d5/image_path.png" class="card-image"/>
 		      <div class="card-number"> 010BR </div>
@@ -183,19 +268,18 @@
 		      <input type="number" min="0" max="100" value="0" />
 		    </div>
 		</div>	
-		<div class="card-item hearts riddle" data-card-id="010SR" >
+
+		<div class="card-item dia lilia pr" data-card-id="111PR+" >
 		    <div class="card-image">
-		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/bbc12a3a98d8487f58a87d3a3070516e/image_path.png" class="card-image"/>
-		      <div class="card-number"> 010SR </div>
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/94cb02feb750f20bad8a85dfe7e18d11/image_path.png" class="card-image"/>
+		      <div class="card-number"> 111PR+ </div>
 		    </div>
 		    <div class="card info">
-		      <div class="card-rarity"> SR </div>
-		      <div class="title">Red Ruler </br>Riddle Rosehearts</div>
+		      <div class="card-rarity"> PR+ </div>
+		      <div class="title">Platinum Jacket</br>Lilia Vanrouge</div>
 		      <input type="number" min="0" max="100" value="0" />
 		    </div>
 		</div>	
-
-
 	</div>
 <script>
 //light mode toggle
@@ -264,6 +348,9 @@ $('#load').on('click', function(){
         
     }); 
 });
+
+//card flipper
+
 </script>
 </body>
 </html>
