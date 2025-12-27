@@ -38,7 +38,7 @@
 	transform: rotateY(180deg);
 }
 
-.back.card-image {
+.back .card-image2 {
 	transform: translate(-50%, -50%) rotateZ(90deg);
     width: 279.2px;
     left: 50%;
