@@ -127,7 +127,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   border: none;
-  padding-bottom: 5rem;
+  padding: 0.5rem;
 }
 .button {
   color: #5c6976;
@@ -151,19 +151,24 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.25rem 0.75rem;
+  padding-top: 5rem;
 }
 .card-item {
   float: left;
-  width: 200px;
   height: fit-content;
 }
 .card-image {
-  width: 100%;
+  width: 200px;
   height: auto;
   display: block;
   position: relative;
-
 }
+
+.cr .card-image,
+.rrr .card-image,
+.sec .card-image {
+  transform: rotate(90deg);
+}  
 
 .card-number {
   position: absolute;
