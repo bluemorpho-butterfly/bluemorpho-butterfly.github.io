@@ -48,29 +48,29 @@
 <body>
 	<h1>Twisted Wonderland Build Divide ~Bright~</h1>
 	<div style="align-content:center;" class="button-group">
-		<button id="save">save</button>	
-		<button id="load">load</button>
-	</div>k
-	<div class="button-group filters-button-group">
-	  <button class="button" id="card-item">All</button>
-	  <button class="button" id="hearts">Heartslabuyl</button>
-	  <button class="button" id="svnc">Savanaclaw</button>
-	  <button class="button" id="octa">Octavinelle</button>
-	  <button class="button" id="scara">Scarabia</button>
-	  <button class="button" id="pome">Pomefiore</button>
-	  <button class="button" id="igni">Ignihyde</button>
-	  <button class="button" id="dia">Diasomnia</button>
+		<button class="button" id="save">save</button>	
+		<button class="button" id="load">load</button>
 	</div>
 	<div class="button-group filters-button-group">
-	  <button class="button" id="card-item">All</button>
-	  <button class="button" id="n">N</button>
-	  <button class="button" id="r">R</button>
-	  <button class="button" id="sr">SR</button>
-	  <button class="button" id="ssr">SSR</button>
-	  <button class="button" id="br">BR</button>
-	  <button class="button" id="bt">BT</button>
-	  <button class="button" id="pr">PR</button>
-	  <button class="button" id="vt">VT</button>
+	  <button class="button filter" id="card-item">All</button>
+	  <button class="button filter" id="hearts">Heartslabuyl</button>
+	  <button class="button filter" id="svnc">Savanaclaw</button>
+	  <button class="button filter" id="octa">Octavinelle</button>
+	  <button class="button filter" id="scara">Scarabia</button>
+	  <button class="button filter" id="pome">Pomefiore</button>
+	  <button class="button filter" id="igni">Ignihyde</button>
+	  <button class="button filter" id="dia">Diasomnia</button>
+	</div>
+	<div class="button-group filters-button-group">
+	  <button class="button filter" id="card-item">All</button>
+	  <button class="button filter" id="n ">N</button>
+	  <button class="button filter" id="r ">R</button>
+	  <button class="button filter" id="sr ">SR</button>
+	  <button class="button filter" id="ssr">SSR</button>
+	  <button class="button filter" id="br">BR</button>
+	  <button class="button filter" id="bt">BT</button>
+	  <button class="button filter" id="pr">PR</button>
+	  <button class="button filter" id="vt">VT</button>
 	</div>
 	<div id="card-grid">
 		<div class="card-item hearts riddle n" data-card-id="001aN" >
@@ -130,6 +130,46 @@
 		    <div class="card info">
 		      <div class="card-rarity"> VT </div>
 		      <div class="title">Heartslabuyl Dorm </br>Riddle Rosehearts</div>
+		      <input type="number" min="0" max="100" value="0" />
+		    </div>
+		</div>
+		<div class="card-item hearts ace n" data-card-id="001bN" >
+		    <div class="card-image">
+		      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/2109737282d2c2de4fc5534be26c9bb6/territory_image_path.png" class="card-image"/>
+					</div>
+					<div class="back">
+<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/2109737282d2c2de4fc5534be26c9bb6/image_path.png" class="card-image two"/>
+					</div>
+				</div>
+				</div>
+		    	<div class="card-number"> 001bN </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> N </div>
+		      <div class="title">Heartslabuyl Dorm </br>Ace Trappola</div>
+		      <input type="number" min="0" max="100" value="0" />
+		    </div>
+		</div>
+		<div class="card-item hearts ace bt" data-card-id="001bBT" >
+		    <div class="card-image">
+		      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/2c8ed8587468aec2462a3914f154e570/territory_image_path.png" class="card-image"/>
+					</div>
+					<div class="back">
+<img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/2c8ed8587468aec2462a3914f154e570/image_path.png" class="card-image two"/>
+					</div>
+				</div>
+				</div>
+		    	<div class="card-number"> 001bBT </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> BT </div>
+		      <div class="title">Heartslabuyl Dorm </br>Ace Trappola</div>
 		      <input type="number" min="0" max="100" value="0" />
 		    </div>
 		</div>
@@ -319,7 +359,7 @@ function lightmode() {
 $('input[type=number]').spinner();
 
 //filtering
-$("button").click(function() {
+$('button.filter').click(function() {
     var show = $(this).attr('id');
     $('.card-item').each(function(){
         $(this).show();
