@@ -1,31 +1,42 @@
-#001aN.card-image:hover {
-	transform: rotate(90deg);
-	background-image: url(https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/d94fd74dcde1aa553be72c1006578b23/image_path.png)
-	}
-#001aBT.card-image:hover {
-	transform: rotate(90deg);
-	background-image: url(https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/e49eb6523da9e1c347bc148ea8ac55d3/image_path.png)
-	}
-#001aVT.card-image:hover {
-	transform: rotate(90deg);
-	background-image: url(https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/5300ef422e613b74fbf759d293aaab6a/image_path.png)
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
 	}
 
-#001bVT.card-image:hover {
-	transform: rotate(90deg);
-	background-image: url(https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/7cfd5df443b4eb0d69886a583b33de4c/image_path.png)
-	}
-#001cVT.card-image:hover {
-	transform: rotate(90deg);
-	background-image: url(https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/0a54b19a13b6712dc04d1b49215423d8/image_path.png)
-	}
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
 
-#001dVT.card-image:hover {
-	transform: rotate(90deg);
-	background-image: url(https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/a3bf6e4db673b6449c2f7d13ee6ec9c0/image_path.png)
-	}
-#001eVT.card-image:hover {
-	transform: rotate(90deg);
-	background-image: url(https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/fc95fa5740ba01a870cfa52f671fe1e4/image_path.png)
-	}
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
 
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
