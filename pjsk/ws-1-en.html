@@ -277,6 +277,16 @@ $('button.filter').click(function() {
     });
     
 //local storage
+$('#save').on('click', function(){
+
+    $('input[type="number"]').each(function(){    
+        var id = $(this).attr('data-input-id');
+        var value = $(this).val();
+       localStorage.setItem(id, value);
+        
+    });   
+});
+
 $('#load').on('click', function(){
     $('input[type="number"]').each(function(){    
         var id = $(this).attr('data-input-id');
@@ -286,6 +296,7 @@ $('#load').on('click', function(){
         
     }); 
 });
+
 </script>
 </body>
 </html>
