@@ -165,9 +165,11 @@ h1 {
 }
 
 .cr .card-image,
+.cc .card-image,
 .rrr .card-image,
 .sec .card-image {
-  transform: rotate(90deg);
+  width: auto;
+  height: 200px;
 }  
 
 .card-number {
@@ -191,7 +193,7 @@ h1 {
 .card-rarity{
   display:flex;
   width: 2rem;
-    align-items: center;
+  align-items: center;
   justify-content: center;
 }
 .title {
