@@ -17,8 +17,33 @@
       rel="stylesheet"
     />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="layout.css">
-	<button class="button themetogglesimple" onclick="lightmode()" >☾</button>
+	<link rel="stylesheet" href="../../layout.css">
+	<link rel="stylesheet" href="bb-1-jp.css">
+<div class="navbar">
+  <button class="button themetogglesimple" onclick="lightmode()" >☾</button>
+  <a href="#home">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Project Sekai 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="../pjsk/ws-1-en">Weiss Schwarz Vol.1 (EN)</a>
+      <a href="../pjsk/ws-1-jp">Weiss Schwarz Vol.1 (JP)</a>
+      <a href="../pjsk/ws-2-jp">Weiss Schwarz Vol.2 (JP)</a>
+      <a href="../pjsk/ws-3-jp">Weiss Schwarz Vol.3 (JP)</a>
+    </div>
+  </div>
+    <div class="dropdown">
+    <button class="dropbtn">Twisted Wonderland 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="wsb-1-jp">Weiss Schwarz Blau (JP)</a>
+      <a href="wsb-exp-jp">Weiss Schwarz Blau Expansion Pack (JP)</a>
+      <a href="bb-1-jp">Build Divide ~Bright~ (JP)</a>
+    </div>
+  </div> 
+</div>
 </head>
 <body>
 	<h1>Twisted Wonderland Build Divide ~Bright~</h1>
@@ -33,9 +58,9 @@
 	  <button class="button" id="dia">Diasomnia</button>
 	</div>
 	<div id="card-grid">
-	  <div class="card-item heart riddle" data-card-id="001aVT" >
+	<div class="card-item hearts riddle" data-card-id="001aVT" >
 	    <div class="card-image">
-	      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/5300ef422e613b74fbf759d293aaab6a/territory_image_path.png?1758276678" class="card-image"/>
+	      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/5300ef422e613b74fbf759d293aaab6a/territory_image_path.png" class="card-image"/>
 	      <div class="card-number"> 001a </div>
 	    </div>
 	    <div class="card info">
@@ -43,8 +68,53 @@
 	      <div class="title">Heartslabuyl Dorm </br>Riddle Rosehearts</div>
 	      <input type="number" min="0" max="100" value="0" />
 	    </div>
-	    
-	  </div>
+	</div>
+	<div class="card-item hearts ace" data-card-id="001bVT" >
+	    <div class="card-image">
+	      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/7cfd5df443b4eb0d69886a583b33de4c/territory_image_path.png" class="card-image"/>
+	      <div class="card-number"> 001b </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> VT </div>
+	      <div class="title">Heartslabuyl Dorm </br>Ace Trappola</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>	    
+	</div>    
+	<div class="card-item hearts deuce" data-card-id="001cVT" >
+	    <div class="card-image">
+	      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/0a54b19a13b6712dc04d1b49215423d8/territory_image_path.png" class="card-image"/>
+	      <div class="card-number"> 001c </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> VT </div>
+	      <div class="title">Heartslabuyl Dorm </br>Deuce Spade</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>	    
+	</div>
+	<div class="card-item hearts cater" data-card-id="001dVT" >
+	    <div class="card-image">
+	      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/0a54b19a13b6712dc04d1b49215423d8/territory_image_path.png" class="card-image"/>
+	      <div class="card-number"> 001d </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> VT </div>
+	      <div class="title">Heartslabuyl Dorm </br>Cater Diamond</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>	    
+	</div>
+	<div class="card-item hearts trey" data-card-id="001eVT" >
+	    <div class="card-image">
+	      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/fc95fa5740ba01a870cfa52f671fe1e4/territory_image_path.png" class="card-image"/>
+	      <div class="card-number"> 001e </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> VT </div>
+	      <div class="title">Heartslabuyl Dorm </br>Trey Clover</div>
+	      <input type="number" min="0" max="100" value="0" />
+	    </div>	    
+	</div>
+	
+	</div>
 <script>
 //light mode toggle
 function lightmode() {
