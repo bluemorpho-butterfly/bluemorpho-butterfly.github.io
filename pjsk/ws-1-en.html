@@ -141,7 +141,7 @@
 	  </div>
 	  <div class="card-item wxs vs r meiko" data-card-id="91E004" >
 	    <div class="card-image">
-	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E004.png" class="card-image"/>
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E004R.png" class="card-image"/>
 	      <div class="card-number"> 004 </div>
 	    </div>
 	    <div class="card info">
@@ -163,7 +163,7 @@
 	  </div>	  
 	  <div class="card-item wxs vs r miku" data-card-id="91E005" >
 	    <div class="card-image">
-	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E005.png" class="card-image"/>
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E005R.png" class="card-image"/>
 	      <div class="card-number"> 005 </div>
 	    </div>
 	    <div class="card info">
@@ -172,15 +172,59 @@
 	      <input type="number" data-input-id="91E005" min="0" max="100" value="0" />
 	    </div>
 	  </div>	  
-	  <div class="card-item wxs vs r miku" data-card-id="91E005SR" >
+	  <div class="card-item wxs vs sr miku" data-card-id="91E005S" >
 	    <div class="card-image">
-	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E005SR.png" class="card-image"/>
-	      <div class="card-number"> 005SR </div>
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E005S.png" class="card-image"/>
+	      <div class="card-number"> 005S </div>
 	    </div>
 	    <div class="card info">
 	      <div class="card-rarity"> SR </div>
 	      <div class="title">Go! Go! Go♪</br>Hatsune Miku</div>
-	      <input type="number" data-input-id="91E005SR" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="91E005S" min="0" max="100" value="0" />
+	    </div>
+	  </div>	  
+	  <div class="card-item wxs r rui" data-card-id="91E006" >
+	    <div class="card-image">
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E006R.png" class="card-image"/>
+	      <div class="card-number"> 006 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> R </div>
+	      <div class="title">Unexpected Happenings</br>Kamishiro Rui</div>
+	      <input type="number" data-input-id="91E006" min="0" max="100" value="0" />
+	    </div>
+	  </div>	  
+	  <div class="card-item wxs ssp rui" data-card-id="91E006SSP" >
+	    <div class="card-image">
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E006SSP.png" class="card-image"/>
+	      <div class="card-number"> 006SSP </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SSP </div>
+	      <div class="title">Unexpected Happenings</br>Kamishiro Rui</div>
+	      <input type="number" data-input-id="91E006SSP" min="0" max="100" value="0" />
+	    </div>
+	  </div>	  
+	  <div class="card-item wxs vs r miku" data-card-id="91E007" >
+	    <div class="card-image">
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E007R.png" class="card-image"/>
+	      <div class="card-number"> 007 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> R </div>
+	      <div class="title">Snow, Sleigh, Reindeer, Santa!</br>Hatsune Miku</div>
+	      <input type="number" data-input-id="91E007" min="0" max="100" value="0" />
+	    </div>
+	  </div>	  
+	  <div class="card-item wxs vs sr miku" data-card-id="91E007S" >
+	    <div class="card-image">
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E007S.png" class="card-image"/>
+	      <div class="card-number"> 007S </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">Snow, Sleigh, Reindeer, Santa!</br>Hatsune Miku</div>
+	      <input type="number" data-input-id="91E007S" min="0" max="100" value="0" />
 	    </div>
 	  </div>	  
 
@@ -195,7 +239,7 @@ function myFunction() {
 //number spinner
 (function ($) {
   $.fn.spinner = function () {
-    this.each(filter () {
+    this.each(function () {
       var el = $(this);
 
       // add elements
@@ -224,7 +268,7 @@ function myFunction() {
 $('input[type=number]').spinner();
 
 //filtering
-$("button").click(function() {
+$('button.filter').click(function() {
     var show = $(this).attr('id');
     $('.card-item').each(function(){
         $(this).show();
