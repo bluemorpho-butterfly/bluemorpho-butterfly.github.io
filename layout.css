@@ -155,7 +155,8 @@ h1 {
 }
 .card-item {
   float: left;
-  height: fit-content;
+  height: auto;
+  align-content: center;
 }
 .card-image {
   width: 200px;
