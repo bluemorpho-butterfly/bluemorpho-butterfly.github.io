@@ -48,7 +48,7 @@ $('button.filter').click(function() {
 $('#save').on('click', function(){
 
     $('input[type="number"]').each(function(){    
-        var id = $(this).attr('id');
+        var id = $(this).attr('number-id');
         var value = $(this).val();
        localStorage.setItem(id, value);
         
