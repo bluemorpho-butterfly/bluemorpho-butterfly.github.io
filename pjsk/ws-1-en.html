@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Number Input</title>
+    <!--Google Fonts and Icons-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Foldit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../../layout.css">
+<div class="navbar">
+	<button class="button themetogglesimple" onclick="lightmode()" >☾</button>
+	<a href="#home">Home</a>
+	<div class="dropdown">
+    <button class="dropbtn">Project Sekai 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="../pjsk/ws-1-en">Weiss Schwarz Vol.1 (EN)</a>
+      <a href="../pjsk/ws-1-jp">Weiss Schwarz Vol.1 (JP)</a>
+      <a href="../pjsk/ws-2-jp">Weiss Schwarz Vol.2 (JP)</a>
+      <a href="../pjsk/ws-3-jp">Weiss Schwarz Vol.3 (JP)</a>
+    </div>
+  </div>
+	<div class="dropdown">
+    <button class="dropbtn">Twisted Wonderland 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="../twst/wsb-1-jp">Weiss Schwarz Blau (JP)</a>
+      <a href="../twst/wsb-exp-jp">Weiss Schwarz Blau Expansion Pack (JP)</a>
+      <a href="../twst/bb-1-jp">Build Divide ~Bright~ (JP)</a>
+    </div>
+  </div> 
+</div>
+</head>
+<body>
+	<h1>Project Sekai Weiss Schwarz Vol. 1 (EN)</h1>
+	<div style="align-content:center;" class="button-group">
+		<button class="button" id="save">save</button>	
+		<button class="button" id="load">load</button>
+	</div>
+	<div class="button-group filters-button-group">
+	  <button class="button filter" id="card-item">All</button>
+	  <button class="button filter" id="ln">Leo/Need</button>
+	  <button class="button filter" id="mmj">More More Jump</button>
+	  <button class="button filter" id="vbs">Vivid Bad Squad</button>
+	  <button class="button filter" id="wxs">Wonderland x Showtime</button>
+	  <button class="button filter" id="n25">Nightcord at 25:00</button>
+	  <button class="button filter" id="vs">Virtual Singer</button>
+	</div>
+	<div class="button-group filters-button-group">
+	  <button class="button filter" id="card-item">All</button>
+	  <button class="button filter" id=" c ">CC</button>
+	  <button class="button filter" id=" c ">C</button>
+	  <button class="button filter" id=" u ">U</button>
+	  <button class="button filter" id=" r ">R</button>
+	  <button class="button filter" id=" rr ">RR</button>
+	  <button class="button filter" id=" sr ">SR</button>
+	  <button class="button filter" id=" rrr ">RRR</button>
+	  <button class="button filter" id=" vr ">VR</button>
+	  <button class="button filter" id=" ssp ">SSP</button>
+	  <button class="button filter" id=" pr ">PR</button>
+	</div>
+	<div id="card-grid">
+	  <div class="card-item wxs rr nene" data-card-id="91E001" >
+	    <div class="card-image">
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E001.png" class="card-image"/>
+	      <div class="card-number"> 001 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> RR </div>
+	      <div class="title">A Gift from Above</br>Kusanagi Nene</div>
+	      <input type="number" data-input-id="91E001" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs ssp nene" data-card-id="91E001SSP" >
+	    <div class="card-image">
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E001SSP.png" class="card-image"/>
+	      <div class="card-number"> 001SSP </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SSP </div>
+	      <div class="title">A Gift from Above</br>Kusanagi Nene</div>
+	      <input type="number" data-input-id="91E001SSP" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item ln rr saki" data-card-id="91E002" >
+	    <div class="card-image">
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E002.png" class="card-image"/>
+	      <div class="card-number"> 002 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> RR </div>
+	      <div class="title">Rainy Distance</br>Tenma Saki</div>
+	      <input type="number" data-input-id="91E002" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item ln ssp saki" data-card-id="91E002SSP" >
+	    <div class="card-image">
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E002SSP.png" class="card-image"/>
+	      <div class="card-number"> 002SSP </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SSP </div>
+	      <div class="title">Rainy Distance</br>Tenma Saki</div>
+	      <input type="number" data-input-id="91E002SSP" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs rr tsukasa" data-card-id="91E003" >
+	    <div class="card-image">
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E003.png" class="card-image"/>
+	      <div class="card-number"> 003 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> RR </div>
+	      <div class="title">Zombies?! Time to Panic!</br>Tenma Tsukasa</div>
+	      <input type="number" data-input-id="91E003" min="0" max="100" value="0" />
+	    </div>
+	  </div>	  
+	  <div class="card-item wxs ssp tsukasa" data-card-id="91E003SSP" >
+	    <div class="card-image">
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E003SSP.png" class="card-image"/>
+	      <div class="card-number"> 003SSP </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SSP </div>
+	      <div class="title">Zombies?! Time to Panic!</br>Tenma Tsukasa</div>
+	      <input type="number" data-input-id="91E003SSP" min="0" max="100" value="0" />
+	    </div>
+	  </div>
+	  <div class="card-item wxs vs r meiko" data-card-id="91E004" >
+	    <div class="card-image">
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E004.png" class="card-image"/>
+	      <div class="card-number"> 004 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> R </div>
+	      <div class="title">Wonderful Idea!</br>MEIKO</div>
+	      <input type="number" data-input-id="91E004" min="0" max="100" value="0" />
+	    </div>
+	  </div>	  
+	  <div class="card-item wxs vs ssp meiko" data-card-id="91E004SSP" >
+	    <div class="card-image">
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E004SSP.png" class="card-image"/>
+	      <div class="card-number"> 004SSSP</div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SSP </div>
+	      <div class="title">Wonderful Idea!</br>MEIKO</div>
+	      <input type="number" data-input-id="91E004SSP" min="0" max="100" value="0" />
+	    </div>
+	  </div>	  
+	  <div class="card-item wxs vs r miku" data-card-id="91E005" >
+	    <div class="card-image">
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E005.png" class="card-image"/>
+	      <div class="card-number"> 005 </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> R </div>
+	      <div class="title">Go! Go! Go♪</br>Hatsune Miku</div>
+	      <input type="number" data-input-id="91E005" min="0" max="100" value="0" />
+	    </div>
+	  </div>	  
+	  <div class="card-item wxs vs r miku" data-card-id="91E005SR" >
+	    <div class="card-image">
+	      <img src="https://en.ws-tcg.com/wordpress/wp-content/images/cardimages/PJS/S91-E005SR.png" class="card-image"/>
+	      <div class="card-number"> 005SR </div>
+	    </div>
+	    <div class="card info">
+	      <div class="card-rarity"> SR </div>
+	      <div class="title">Go! Go! Go♪</br>Hatsune Miku</div>
+	      <input type="number" data-input-id="91E005SR" min="0" max="100" value="0" />
+	    </div>
+	  </div>	  
+
+	  
+	</div>
+<script>
+//light mode toggle
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("light-mode");
+}
+//number spinner
+(function ($) {
+  $.fn.spinner = function () {
+    this.each(filter () {
+      var el = $(this);
+
+      // add elements
+      el.wrap('<div class="spinner"></div>');
+      el.before('<span class="sub">-</span>');
+      el.after('<span class="add">+</span>');
+
+      // substract
+      el.parent().on('click', '.sub', function () {
+        if (el.val() > parseInt(el.attr('min')))
+          el.val(function (i, oldval) {
+            return --oldval;
+          });
+      });
+
+      // increment
+      el.parent().on('click', '.add', function () {
+        if (el.val() < parseInt(el.attr('max')))
+          el.val(function (i, oldval) {
+            return ++oldval;
+          });
+      });
+    });
+  };
+})(jQuery);
+$('input[type=number]').spinner();
+
+//filtering
+$("button").click(function() {
+    var show = $(this).attr('id');
+    $('.card-item').each(function(){
+        $(this).show();
+        var test = $(this).attr('class');
+        if (test.indexOf(show) < 0) $(this).hide();
+    });
+    
+//local storage
+$('#load').on('click', function(){
+    $('input[type="number"]').each(function(){    
+        var id = $(this).attr('data-input-id');
+        var value = localStorage.getItem(id);
+        
+        $(this).val(value);
+        
+    }); 
+});
+</script>
+</body>
+</html>
