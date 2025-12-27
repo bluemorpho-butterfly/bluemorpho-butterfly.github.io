@@ -8,8 +8,8 @@
 	}
 
 .flip-container, .front, .back {
-	width: 100%;
-	height: auto;
+	width: 200px;
+	height: 279.2px;
 }
 
 /* flip speed goes here */
@@ -23,10 +23,7 @@
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-
 	position: absolute;
-	top: 0;
-	left: 0;
 }
 
 /* front pane, placed above back */
@@ -39,4 +36,12 @@
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+}
+
+.back.card-image {
+	transform: translate(-50%, -50%) rotateZ(90deg);
+    width: 279.2px;
+    left: 50%;
+    top: 50%;
+	width: 279.2px;
 }
