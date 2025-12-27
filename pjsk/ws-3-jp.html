@@ -18,19 +18,41 @@
     />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="../../layout.css">
+<div class="navbar">
 	<button class="button themetogglesimple" onclick="lightmode()" >☾</button>
+	<a href="#home">Home</a>
+	<div class="dropdown">
+    <button class="dropbtn">Project Sekai 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="../pjsk/ws-1-en">Weiss Schwarz Vol.1 (EN)</a>
+      <a href="../pjsk/ws-1-jp">Weiss Schwarz Vol.1 (JP)</a>
+      <a href="../pjsk/ws-2-jp">Weiss Schwarz Vol.2 (JP)</a>
+      <a href="../pjsk/ws-3-jp">Weiss Schwarz Vol.3 (JP)</a>
+    </div>
+  </div>
+	<div class="dropdown">
+    <button class="dropbtn">Twisted Wonderland 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="../twst/wsb-1-jp">Weiss Schwarz Blau (JP)</a>
+      <a href="../twst/wsb-exp-jp">Weiss Schwarz Blau Expansion Pack (JP)</a>
+      <a href="../twst/bb-1-jp">Build Divide ~Bright~ (JP)</a>
+    </div>
+  </div> 
+</div>
 </head>
 <body>
 	<h1>Project Sekai Weiss Schwarz Vol. 3 (JP)</h1>
 	<div class="button-group filters-button-group">
-	  <button class="button" id="card-item">All</button>
-	  <button class="button" id="ln">Leo/Need</button>
-	  <button class="button" id="mmj">More More Jump</button>
-	  <button class="button" id="vbs">Vivid Bad Squad</button>
-	  <button class="button" id="wxs">Wonderland x Showtime</button>
-	  <button class="button" id="n25">Nightcord at 25:00</button>
-	  <button class="button" id="vs">Virtual Singer</button>
-	</div>
+	  <button class="button is-checked" data-filter="*">show all</button>
+	  <button class="button" data-filter=".ln">Leo/Need</button>
+	  <button class="button" data-filter=".mmj">More More Jump</button>
+	  <button class="button" data-filter=".vbs">Vivid Bad Squad</button>
+	  <button class="button" data-filter=".wxs">Wonderland x Showtime</button>
+	  <button class="button" data-filter=".n25">Nightcord at 25:00</button>
 	</div>
 	<div id="card-grid">
 	  <div class="card-item wxs tsukasa" data-card-id="125001" >
@@ -41,7 +63,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> RR </div>
 	      <div class="title">In Tearful Eyes, An Immortal Bird </br>Tenma Tsukasa</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125001" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item wxs tsukasa" data-card-id="125001S" >
@@ -52,7 +74,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> SR </div>
 	      <div class="title">In Tearful Eyes, An Immortal Bird </br>Tenma Tsukasa</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125001S" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item wxs tsukasa" data-card-id="125001SP" >
@@ -63,7 +85,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> SP </div>
 	      <div class="title">In Tearful Eyes, An Immortal Bird </br>Tenma Tsukasa</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125001SP" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item wxs emu" data-card-id="125002">
@@ -74,7 +96,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> RR </div>
 	      <div class="title">The Sparkle in Your Eyes</br>Emu Otori</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125002" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item wxs emu" data-card-id="125002S">
@@ -85,7 +107,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> SR </div>
 	      <div class="title">The Sparkle in Your Eyes</br>Emu Otori</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125002S" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item wxs emu" data-card-id="125002SP">
@@ -96,7 +118,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> SP </div>
 	      <div class="title">The Sparkle in Your Eyes</br>Emu Otori</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125002SP" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item wxs rui" data-card-id="125003">
@@ -107,7 +129,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> R </div>
 	      <div class="title">Blowing in the Evening Breeze</br>Kamishiro Rui</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125003" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item wxs rui" data-card-id="125003S">
@@ -118,7 +140,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> SR </div>
 	      <div class="title">Blowing in the Evening Breeze</br>Kamishiro Rui</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125003S" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item wxs rui" data-card-id="125003SP">
@@ -129,7 +151,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> SP </div>
 	      <div class="title">Blowing in the Evening Breeze</br>Kamishiro Rui</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125003SP" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item wxs vs miku" data-card-id="125004">
@@ -140,7 +162,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> R </div>
 	      <div class="title">Shiny Smiley Magic</br>Hatsune Miku </div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125004" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item wxs vs miku" data-card-id="125004S">
@@ -151,7 +173,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> SR </div>
 	      <div class="title">Shiny Smiley Magic</br>Hatsune Miku </div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125004S" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item ln saki" data-card-id="125005">
@@ -162,7 +184,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> R </div>
 	      <div class="title">Ready to Take it All On</br>Tenma Saki </div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125005" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item ln saki" data-card-id="125005S">
@@ -173,10 +195,10 @@
 	    <div class="card info">
 	      <div class="card-rarity"> SR </div>
 	      <div class="title">Ready to Take it All On</br>Tenma Saki </div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125005S" min="0" max="100" value="0" />
 	    </div>
 	  </div>
-	  <div class="card-item ln  saki" data-card-id="125005SP">
+	  <div class="card-item ln saki" data-card-id="125005SP">
 	    <div class="card-image">
 	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_005sp.png" class="card-image"/>
 	      <div class="card-number"> 004 </div>
@@ -184,7 +206,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> SP </div>
 	      <div class="title">Ready to Take it All On</br>Tenma Saki </div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125005SP" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item vs rin" data-card-id="125006">
@@ -195,7 +217,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> R </div>
 	      <div class="title">A Bridge to Mend Your Bond</br>Kagamine Rin</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125006" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item vs rin" data-card-id="125006S">
@@ -206,7 +228,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> SR </div>
 	      <div class="title">A Bridge to Mend Your Bond</br>Kagamine Rin</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125006S" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item vs rin" data-card-id="125006SP">
@@ -217,7 +239,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> SP </div>
 	      <div class="title">A Bridge to Mend Your Bond</br>Kagamine Rin</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125006SP" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item vs len" data-card-id="125007">
@@ -228,7 +250,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> R </div>
 	      <div class="title">My Cheer for You</br>Kagamine Len</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125007" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item vs len" data-card-id="125007S">
@@ -239,18 +261,18 @@
 	    <div class="card info">
 	      <div class="card-rarity"> SR </div>
 	      <div class="title">My Cheer for You</br>Kagamine Len</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125007S" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item vs len" data-card-id="125007SP">
 	    <div class="card-image">
-	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_007sp.png" class="card-image"/>
+	      <img src="https://ws-tcg.com/wordpress/wp-content/images/cardlist/p/pjs_s125/pjs_s125_007s.png" class="card-image"/>
 	      <div class="card-number"> 007 </div>
 	    </div>
 	    <div class="card info">
 	      <div class="card-rarity"> SP </div>
 	      <div class="title">My Cheer for You</br>Kagamine Len</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125007SP" min="0" max="100" value="0" />
 	    </div>
 	  </div>
 	  <div class="card-item wxs tsukasa" data-card-id="125008">
@@ -261,7 +283,7 @@
 	    <div class="card info">
 	      <div class="card-rarity"> R </div>
 	      <div class="title">A Rush of Excitement</br>Tenma Tasukasa</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125008" min="0" max="100" value="0" />
 	    </div>
 	  </div>	  
 	  <div class="card-item wxs tsukasa" data-card-id="125008S">
@@ -272,21 +294,21 @@
 	    <div class="card info">
 	      <div class="card-rarity"> SR </div>
 	      <div class="title">A Rush of Excitement</br>Tenma Tasukasa</div>
-	      <input type="number" min="0" max="100" value="0" />
+	      <input type="number" data-input-id="125008S" min="0" max="100" value="0" />
 	    </div>
 	  </div>
-		
+	  
 	</div>
 <script>
 //light mode toggle
-function lightmode() {
+function myFunction() {
   var element = document.body;
   element.classList.toggle("light-mode");
 }
 //number spinner
 (function ($) {
   $.fn.spinner = function () {
-    this.each(function () {
+    this.each(filter () {
       var el = $(this);
 
       // add elements
@@ -315,13 +337,38 @@ function lightmode() {
 $('input[type=number]').spinner();
 
 //filtering
-$("button").click(function() {
-    var show = $(this).attr('id');
-    $('.card-item').each(function(){
-        $(this).show();
-        var test = $(this).attr('class');
-        if (test.indexOf(show) < 0) $(this).hide();
-    });
+var $grid = $('.card-grid').isotope({
+  itemSelector: '.card-item',
+  layoutMode: 'fitRows',
+  getSortData: {
+    rarity: '.card-rarity',
+    number: '.card-number parseInt',
+  }
+});
+
+$('#filters').on( 'click', 'button', function() {
+  var filterValue = $( this ).attr('data-filter');
+  $grid.isotope({ filter: filterValue });
+});
+$('#save').on('click', function(){
+
+    $('input[type="number"]').each(function(){    
+        var id = $(this).attr('data-input-id');
+        var value = $(this).val();
+       localStorage.setItem(id, value);
+        
+    });   
+});
+
+//local storage
+$('#load').on('click', function(){
+    $('input[type="number"]').each(function(){    
+        var id = $(this).attr('data-input-id');
+        var value = localStorage.getItem(id);
+        
+        $(this).val(value);
+        
+    }); 
 });
 </script>
 </body>
