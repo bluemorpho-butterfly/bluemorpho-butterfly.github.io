@@ -19,7 +19,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="../../layout.css">
 	<link rel="stylesheet" href="bb-1-jp.css">
-<div class="navbar">
+	<style>
+	.button-image {
+		width: 30px;
+  		height: auto;
+	}  
+	</style><div class="navbar">
   <button class="button themetogglesimple" onclick="lightmode()" >☾</button>
   <a href="#home">Home</a>
   <div class="dropdown">
@@ -60,6 +65,7 @@
 	  <button class="button filter" id="pome">Pomefiore</button>
 	  <button class="button filter" id="igni">Ignihyde</button>
 	  <button class="button filter" id="dia">Diasomnia</button>
+	  <button class="button filter" id="ramshackle">Ramshackle</button>
 	</div>
 	<div class="button-group filters-button-group">
 	  <button class="button filter" id="card-item">All</button>
@@ -71,6 +77,17 @@
 	  <button class="button filter" id="bt">BT</button>
 	  <button class="button filter" id="pr">PR</button>
 	  <button class="button filter" id="vt">VT</button>
+	</div>
+	<div class="button-group filters-button-group">
+	  <button class="button filter" id="card-item">All</button>
+	  <button class="button filter" id="riddle"><img src="https://static.wikia.nocookie.net/disneytsumtsum/images/6/61/RiddleRosehearts.png/" class="button-image"></button>
+	  <button class="button filter" id="ace"><img src="https://static.wikia.nocookie.net/disneytsumtsum/images/6/61/AceTrappola.png/" class="button-image"></button>
+	  <button class="button filter" id="deuce"><img src="https://static.wikia.nocookie.net/disneytsumtsum/images/6/61/DeuceSpade.png/" class="button-image"></button>
+	  <button class="button filter" id="cater"><img src="https://static.wikia.nocookie.net/disneytsumtsum/images/6/61/CaterDiamond.png/" class="button-image"></button>
+	  <button class="button filter" id="trey"><img src="https://static.wikia.nocookie.net/disneytsumtsum/images/6/61/TreyClover.png/" class="button-image"></button>
+	  <button class="button filter" id="leona"><img src="https://static.wikia.nocookie.net/disneytsumtsum/images/6/61/LeonaKingscholar.png/" class="button-image"></button>
+	  <button class="button filter" id="jack"><img src="https://static.wikia.nocookie.net/disneytsumtsum/images/6/61/JackHowl.png/" class="button-image"></button>
+	  <button class="button filter" id="ruggie"><img src="https://static.wikia.nocookie.net/disneytsumtsum/images/6/61/RuggieBucchi.png/" class="button-image"></button>
 	</div>
 	<div id="card-grid">
 		<div class="card-item hearts n riddle" data-card-id="001aN" >
@@ -484,6 +501,153 @@
 		    </div>
 		</div>	
 
+		<div class="card-item ramshackle n grim" data-card-id="074N" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/c344336196d5ec19bd54fd14befdde87/image_path.png" class="card-image"/>
+		      <div class="card-number"> 074N </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> N </div>
+		      <div class="title">Ramshackle Dorm Student </br>Grim</div>
+		      <input type="number" number-id="074N" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+		<div class="card-item ramshackle r grim" data-card-id="075R" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/e0ae4561193dbf6e4cf7e8f4006948e3/image_path.png" class="card-image"/>
+		      <div class="card-number"> 075R </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> R </div>
+		      <div class="title">Ramshackle Dorm Student </br>Grim</div>
+		      <input type="number" number-id="075R" min="0" max="100" value="0" />
+		    </div>
+		</div>
+		<div class="card-item hearts n riddle" data-card-id="076N" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/927e838a450e2fe6225edfc3d12e2463/image_path.png" class="card-image"/>
+		      <div class="card-number"> 076N </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> N </div>
+		      <div class="title">I am the Rule </br>Riddle Rosehearts</div>
+		      <input type="number" number-id="076N" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+
+		<div class="card-item hearts pr riddle" data-card-id="083PR" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/8804f94e16ba5b680e239a554a08f7d2/image_path.png" class="card-image"/>
+		      <div class="card-number"> 083PR </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> PR </div>
+		      <div class="title">Welcome to the Villains' World</br>Riddle Rosehearts</div>
+		      <input type="number" number-id="083PR" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+		<div class="card-item hearts pr riddle" data-card-id="083PR+" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/9b16759a62899465ab21e2e79d2ef75c/image_path.png" class="card-image"/>
+		      <div class="card-number"> 083PR+ </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> PR+ </div>
+		      <div class="title">Welcome to the Villains' World</br>Riddle Rosehearts</div>
+		      <input type="number" number-id="083PR+" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+
+		<div class="card-item dia pr malleus" data-card-id="089PR" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/4c4ea5258ef3fb3fb1fc48fee9b4408c/image_path.png" class="card-image"/>
+		      <div class="card-number"> 089PR </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> PR </div>
+		      <div class="title">Welcome to the Villains' World</br>Malleus Draconia</div>
+		      <input type="number" number-id="089PR" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+		<div class="card-item dia pr malleus" data-card-id="089PR+" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/b59442085644532ef03417a3e5a76437/image_path.png" class="card-image"/>
+		      <div class="card-number"> 089PR+ </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> PR+ </div>
+		      <div class="title">Welcome to the Villains' World</br>Malleus Draconia</div>
+		      <input type="number" number-id="089PR+" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+		<div class="card-item hearts pr riddle" data-card-id="090PR" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/d76d8deea9c19cc9aaf2237d2bf2f785/image_path.png" class="card-image"/>
+		      <div class="card-number"> 090PR </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> PR </div>
+		      <div class="title">Platinum Jacket</br>Riddle Rosehearts</div>
+		      <input type="number" number-id="090PR" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+		<div class="card-item hearts pr riddle" data-card-id="090PR+" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/418db2ea5d227a9ea8db8e5357ca2084/image_path.png" class="card-image"/>
+		      <div class="card-number"> 090PR+ </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> PR+ </div>
+		      <div class="title">Platinum Jacket</br>Riddle Rosehearts</div>
+		      <input type="number" number-id="090PR+" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+
+
+		<div class="card-item igni pr idia" data-card-id="106PR" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/2f0928c25ff3f884e8d2fa38835bd328/image_path.png" class="card-image"/>
+		      <div class="card-number"> 106PR </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> PR </div>
+		      <div class="title">Platinum Jacket</br>Idia Shroud</div>
+		      <input type="number" number-id="106PR" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+		<div class="card-item igni pr idia" data-card-id="106PR+" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/a67c8c9a961b4182688768dd9ba015fe/image_path.png" class="card-image"/>
+		      <div class="card-number"> 106PR+ </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> PR+ </div>
+		      <div class="title">Platinum Jacket</br>Idia Shroud</div>
+		      <input type="number" number-id="106PR+" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+		<div class="card-item igni pr ortho" data-card-id="107PR" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/0a4bbceda17a6253386bc9eb45240e25/image_path.png" class="card-image"/>
+		      <div class="card-number"> 107PR </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> PR </div>
+		      <div class="title">Platinum Jacket</br>Ortho Shroud</div>
+		      <input type="number" number-id="107PR" min="0" max="100" value="0" />
+		    </div>
+		</div>	
+		<div class="card-item igni pr ortho" data-card-id="107PR+" >
+		    <div class="card-image">
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/d5eca8dc3820cad9fe56a3bafda65ca1/image_path.png" class="card-image"/>
+		      <div class="card-number"> 107PR+ </div>
+		    </div>
+		    <div class="card info">
+		      <div class="card-rarity"> PR+ </div>
+		      <div class="title">Platinum Jacket</br>Ortho Shroud</div>
+		      <input type="number" number-id="107PR+" min="0" max="100" value="0" />
+		    </div>
+		</div>	
 		<div class="card-item dia pr malleus" data-card-id="108PR" >
 		    <div class="card-image">
 		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/8fdd149fcaa7058caccc9c4ad5b0d89a/image_path.png" class="card-image"/>
@@ -519,7 +683,7 @@
 		</div>	
 		<div class="card-item dia pr silver" data-card-id="109PR+" >
 		    <div class="card-image">
-		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/baeabb8ff01160eec0b5db7da2805f57/image_path.png" class="card-image"/>
+		      <img src="https://storage.googleapis.com/prd-buildivide-static-7c153c/uploads/card/094366eaa7a4b5d7f9ed227f212b3649/image_path.png" class="card-image"/>
 		      <div class="card-number"> 109PR+ </div>
 		    </div>
 		    <div class="card info">
